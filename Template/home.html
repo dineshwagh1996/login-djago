@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+  <form  id="post_form" action="/form" method="post" >
+   <h2>Regester:</h2>
+  {% csrf_token %}
+  <p>Eid</p>
+  <input type="text" name="eid" id="eid" placeholder="eid"><br>
+ <p>Name</p>
+ <input type="text" name="ename" id="ename" placeholder="enter name" ><br>
+ <p>Email</p>
+ <input type="email" name="eemail" id="eemail" placeholder="email"><br>
+ <p>Contact</p>
+ <input type="number" name="econtact" id="econtact" placeholder="contact"><br>
+ <br>
+ <button type="submit" name="">SUBMIT</button>
+</form>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="{% static '/js/main.js' %}" charset="utf-8"></script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+   $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+  </head>
+  <body>
+    <h2>successfully login!</h2>
+    <br>
+    <h3>Students Data:</h3>
+  <p><H3>search the table for first names:</H3></p>
+  <input id="myInput" type="text" placeholder="Search..">
+  <br>
+  <br>
+  <table>
+    <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Show Data</th>
+    </tr>
+    </thead>
+    <tbody id="myTable">
+    <tr>
+      <td>Dipak</td>
+      <td>
+         <a href="http://localhost:8000/dipakdata">click here</a>
+       </td>
+    </tr>
+    <tr>
+      <td>Dip</td>
+      <td>
+         <a href="http://localhost:8000/dipdata">click here</a>
+       </td>
+    </tr>
+    <tr>
+      <td>Saurabh</td>
+      <td>
+         <a href="http://localhost:8000/saurabhdata">click here</a>
+       </td>
+    </tr>
+    <tr>
+      <td>Mahesh</td>
+      <td>
+         <a href="http://localhost:8000/maheshdata">click here</a>
+       </td>
+    </tr>
+    <tr>
+      <td>Swati</td>
+      <td>
+         <a href="http://localhost:8000/swatidata">click here</a>
+       </td>
+    </tr>
+    </tbody>
+   </table>
+  </body>
+</html>

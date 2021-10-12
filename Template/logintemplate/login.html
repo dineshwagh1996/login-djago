@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <style type="text/css">
+
+       body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .bg-img {
+        height: 500%;
+        width=50%;
+        margin-right=auto;
+        margin-left=auto;
+        background-position:50% 50%;
+        background-repeat:repeat-x;
+        background-size:cover;
+        position: relative;
+      }
+      .container {
+
+        margin-left: 600px;
+        max-width: 300px;
+        padding-top:30px;
+        <!--padding:16px;-->
+        background-color:white;
+      }
+      input[type=text], input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .btn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 80%;
+        opacity: 0.9;
+      }
+      .btn:hover {
+        opacity: 1;
+      }
+      h1{
+        color:blue;
+      }
+      .img{
+        margin-bottom:300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-img" >
+      <form class="container" method="POST" action="/getformlogin">
+        {% csrf_token %}
+        {{form.as_p}}
+        <h1>Please Login</h1>
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter username"id="Username" name="Username" required>
+         <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="password" name="password" required>
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+</body>
+</html>
