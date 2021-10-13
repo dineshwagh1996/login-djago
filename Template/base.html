@@ -5,9 +5,83 @@
     <meta charset="utf-8">
     <title>{% block title %}Title{% endblock title %}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    
+
     {% block stylesheet %}{% endblock stylesheet %}
     <style type="text/css">
+
+
+    /*Hide all except first fieldset*/
+#helpdeskform .field2 {
+ display: none;
+}
+/*inputs*/
+#helpdeskform input {
+ padding: 10px;
+ border: 1px solid #ccc;
+ border-radius: 3px;
+ margin-bottom: 10px;
+ width: 80%;
+ color: #2C3E50;
+ font-size: 13px;
+}
+
+#helpdeskform textarea {
+ padding: 15px;
+ border: 1px solid #ccc;
+ border-radius: 3px;
+ margin-bottom: 10px;
+ width: 100%;
+ box-sizing: border-box;
+ color: #2C3E50;
+ font-size: 13px;
+}
+
+/*buttons*/
+#helpdeskform .action-button {
+ width: 100px;
+ font-weight: bold;
+ border: 0 none;
+ border-radius: 1px;
+ cursor: pointer;
+ padding: 10px 5px;
+ margin: 10px 5px;
+}
+#helpdeskform .action-button:hover,
+#helpdeskform .action-button:focus {
+ box-shadow: 0 0 0 2px white, 0 0 0 3px #900;
+}
+
+/*Form labels*/
+label.form-label {
+ text-align: left;
+}
+
+/*Phone Label Align*/
+input#phone-field {
+ margin-left: 26px;
+}
+
+/*E-mail Label Align*/
+input#email-field {
+ margin-left: 24px;
+}
+
+.counter-field {
+ font-size: 10px;
+}
+/*Divider*/
+hr {
+margin-bottom: 20px;
+padding: 0px;
+border-width: 2px;
+border-style: solid;
+border-color: #ccc;
+}
+
+
+
+
+
       h2{
         color:pink;
       }
@@ -22,7 +96,7 @@
     {% endblock content %}
     </main>
     </body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
      <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js'></script>

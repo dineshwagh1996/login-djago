@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Add Products{% endblock %}
+{% block content %}
+<form id="helpdeskform" method="post"  enctype="multipart/form-data">
+        <h2>(Placeholder) Title of Form heading level 2</h2>
+            <p><label class="form-label first-name" for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" placeholder="First Name"/>
+            </p>
+            <p><label class="form-label last-name" for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" placeholder="Last Name"/>
+            </p>
+            <p><label class="form-label" for="image">image:</label>
+                <input type="file" name="image" id="image" placeholder="Image"/>
+            </p>
+             <p><label class="form-label" for="email-field">E-mail:</label>
+                <input type="text" name="email" id="email" placeholder="E-mail"/>
+            </p>
+            <hr>
+              <p><label for="review">
+                <input type="button" name="submit" class="btn btn-primary" value="SUBMIT"/>
+            </label></p>
+
+  </form>
+  fname:<p id="firstname"></p>
+  Lname:<p id="lastname"></p>
+  image:<p id="image"></p>
+  email:<p id="Email"></p>
+  {% endblock %}
+  {% block javascript %}
+  <script type="text/javascript">
+     $(document).ready(function () {
+
+       $( "#fname" ).keyup(function() {
+
+          $('#firstname').text($(this).val());
+       });
+});
+$(document).ready(function () {
+
+   $("#lname").keyup(function() {
+
+     $('#lastname').text($(this).val());
+  });
+});
+$(document).ready(function () {
+
+   $("#email").keyup(function() {
+
+     $('#Email').text($(this).val());
+  });
+});
+
+</script>
+{% endblock javascript %}
